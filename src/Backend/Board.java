@@ -23,7 +23,6 @@ public class Board {
         for(int i=0,ctr=-1;i<dim;i++) {
             for(int j=0;j<dim;j++,ctr++) {
                Coordinate coords=new Coordinate(i,j);
-               ArrayList adjs=getAdjacencyList(coords);
                Die die=new Die(faceList.get(ctr),coords);
                DiceMap.put(coords,die);
             }
@@ -66,6 +65,7 @@ public class Board {
             Die d=DiceMap.get(c);
             d.setTop(d.getFaces().charAt(rand.nextInt()));
         }
+
         //start bfs
 
     }

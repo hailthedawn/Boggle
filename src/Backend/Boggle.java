@@ -10,11 +10,14 @@ public class Boggle {
         Scanner sc=new Scanner(System.in);
         System.out.println("Start Game? Y/N");
         String ch=sc.nextLine();
-
+        Board board=new Board(4);
         while(ch.equals("Y")) {
             System.out.println("Game begins.");
 
-            Board board=new Board(4);
+            //enter words into trie
+            Trie trie=new Trie();
+
+
             board.startRound();
             System.out.println("Current board set-up:"+board.toString());
 
